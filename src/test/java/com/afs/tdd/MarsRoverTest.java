@@ -13,8 +13,8 @@ class MarsRoverTest {
         //given
         int locationX = 0;
         int locationY = 0;
-        String direction = "";
-        String command = "";
+        String direction = "N";
+        String command = "M";
         String expected = "0 1 N";
 
         MarsRover marsRover = new MarsRover(locationX, locationY, direction);
@@ -30,8 +30,8 @@ class MarsRoverTest {
         //given
         int locationX = 0;
         int locationY = 0;
-        String direction = "";
-        String command = "";
+        String direction = "S";
+        String command = "M";
         String expected = "0 -1 S";
 
         MarsRover marsRover = new MarsRover(locationX, locationY, direction);
@@ -47,8 +47,8 @@ class MarsRoverTest {
         //given
         int locationX = 0;
         int locationY = 0;
-        String direction = "";
-        String command = "";
+        String direction = "E";
+        String command = "M";
         String expected = "1 0 E";
 
         MarsRover marsRover = new MarsRover(locationX, locationY, direction);
@@ -64,8 +64,8 @@ class MarsRoverTest {
         //given
         int locationX = 0;
         int locationY = 0;
-        String direction = "";
-        String command = "";
+        String direction = "W";
+        String command = "M";
         String expected = "-1 0 W";
 
         MarsRover marsRover = new MarsRover(locationX, locationY, direction);
@@ -81,8 +81,8 @@ class MarsRoverTest {
         //given
         int locationX = 0;
         int locationY = 0;
-        String direction = "";
-        String command = "";
+        String direction = "N";
+        String command = "L";
         String expected = "0 0 W";
 
         MarsRover marsRover = new MarsRover(locationX, locationY, direction);
@@ -98,8 +98,8 @@ class MarsRoverTest {
         //given
         int locationX = 0;
         int locationY = 0;
-        String direction = "";
-        String command = "";
+        String direction = "S";
+        String command = "L";
         String expected = "0 0 E";
 
         MarsRover marsRover = new MarsRover(locationX, locationY, direction);
@@ -115,8 +115,8 @@ class MarsRoverTest {
         //given
         int locationX = 0;
         int locationY = 0;
-        String direction = "";
-        String command = "";
+        String direction = "E";
+        String command = "L";
         String expected = "0 0 N";
 
         MarsRover marsRover = new MarsRover(locationX, locationY, direction);
@@ -132,8 +132,8 @@ class MarsRoverTest {
         //given
         int locationX = 0;
         int locationY = 0;
-        String direction = "";
-        String command = "";
+        String direction = "W";
+        String command = "L";
         String expected = "0 0 S";
 
         MarsRover marsRover = new MarsRover(locationX, locationY, direction);
@@ -148,8 +148,8 @@ class MarsRoverTest {
         //given
         int locationX = 0;
         int locationY = 0;
-        String direction = "";
-        String command = "";
+        String direction = "N";
+        String command = "R";
         String expected = "0 0 E";
 
         MarsRover marsRover = new MarsRover(locationX, locationY, direction);
@@ -164,8 +164,8 @@ class MarsRoverTest {
         //given
         int locationX = 0;
         int locationY = 0;
-        String direction = "";
-        String command = "";
+        String direction = "S";
+        String command = "R";
         String expected = "0 0 W";
 
         MarsRover marsRover = new MarsRover(locationX, locationY, direction);
@@ -181,8 +181,8 @@ class MarsRoverTest {
         //given
         int locationX = 0;
         int locationY = 0;
-        String direction = "";
-        String command = "";
+        String direction = "E";
+        String command = "R";
         String expected = "0 0 S";
 
         MarsRover marsRover = new MarsRover(locationX, locationY, direction);
@@ -197,8 +197,8 @@ class MarsRoverTest {
         //given
         int locationX = 0;
         int locationY = 0;
-        String direction = "";
-        String command = "";
+        String direction = "W";
+        String command = "R";
         String expected = "0 0 N";
 
         MarsRover marsRover = new MarsRover(locationX, locationY, direction);

@@ -12,7 +12,6 @@ public class MarsRover {
         this.direction = direction;
     }
     public String executeCommand(String command){
-         //if(command.equals("M")) move();
          move();
          return String.format("%d %d %s",locationX,locationY,direction);
     }

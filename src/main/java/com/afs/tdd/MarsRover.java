@@ -4,14 +4,27 @@ public class MarsRover {
 
     int locationX, locationY;
     String direction;
-    String command;
 
     public MarsRover(int locationX, int locationY, String direction) {
         this.locationX = locationX;
         this.locationY = locationY;
         this.direction = direction;
     }
-    public String executeCommand(String command){
+
+    public String executeBatchCommand(String commands){
+        for(int i=0; i<commands.length(); i++){
+            executeCommand("" + commands.charAt(i));
+        }
+
+        return String.format("%d %d %s",locationX,locationY,direction);
+    }
+
+    public String executeSingleCommand(String command){
+        executeCommand(command);
+        return String.format("%d %d %s",locationX,locationY,direction);
+    }
+
+    private void executeCommand(String command){
         switch (command){
             case "M":
                 move();
@@ -25,8 +38,6 @@ public class MarsRover {
             default:
                 break;
         }
-         //if(command.equals("M")) move();
-         return String.format("%d %d %s",locationX,locationY,direction);
     }
 
     public void move(){
@@ -81,10 +92,6 @@ public class MarsRover {
             default:
                 break;
         }
-
     }
-
-
-
 }
 

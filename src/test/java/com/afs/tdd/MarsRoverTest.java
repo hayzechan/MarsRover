@@ -3,13 +3,17 @@ package com.afs.tdd;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import javax.swing.text.MaskFormatter;
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MarsRoverTest {
 
     @Test
     // 00N -> 01N
-    void shouldMoveForwardFromN_whenExecuteCommand_givenStartFromN() {
+    void shouldMoveForwardFromN_whenexecuteSingleCommand_givenStartFromN() {
         //given
         int locationX = 0;
         int locationY = 0;
@@ -20,13 +24,13 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(locationX, locationY, direction);
 
         //when
-        String actual = marsRover.executeCommand(command);
+        String actual = marsRover.executeSingleCommand(command);
         //then
         assertEquals(expected,actual);
     }
     //00S -> 0-1S
     @Test
-    void shouldMoveForwardFromS_whenExecuteCommand_givenStartFromS() {
+    void shouldMoveForwardFromS_whenexecuteSingleCommand_givenStartFromS() {
         //given
         int locationX = 0;
         int locationY = 0;
@@ -37,13 +41,13 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(locationX, locationY, direction);
 
         //when
-        String actual = marsRover.executeCommand(command);
+        String actual = marsRover.executeSingleCommand(command);
         //then
         assertEquals(expected,actual);
     }
     //00E -> 10E
     @Test
-    void shouldMoveForwardFromE_whenExecuteCommand_givenStartFromE() {
+    void shouldMoveForwardFromE_whenexecuteSingleCommand_givenStartFromE() {
         //given
         int locationX = 0;
         int locationY = 0;
@@ -54,13 +58,13 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(locationX, locationY, direction);
 
         //when
-        String actual = marsRover.executeCommand(command);
+        String actual = marsRover.executeSingleCommand(command);
         //then
         assertEquals(expected,actual);
     }
     //00W -> -10W
     @Test
-    void shouldMoveForwardFromW_whenExecuteCommand_givenStartFromW() {
+    void shouldMoveForwardFromW_whenexecuteSingleCommand_givenStartFromW() {
         //given
         int locationX = 0;
         int locationY = 0;
@@ -71,13 +75,13 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(locationX, locationY, direction);
 
         //when
-        String actual = marsRover.executeCommand(command);
+        String actual = marsRover.executeSingleCommand(command);
         //then
         assertEquals(expected,actual);
     }
     //00N -> 00W
     @Test
-    void shouldTurnLeftFromN_whenExecuteCommand_givenStartFromN() {
+    void shouldTurnLeftFromN_whenexecuteSingleCommand_givenStartFromN() {
         //given
         int locationX = 0;
         int locationY = 0;
@@ -88,13 +92,13 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(locationX, locationY, direction);
 
         //when
-        String actual = marsRover.executeCommand(command);
+        String actual = marsRover.executeSingleCommand(command);
         //then
         assertEquals(expected,actual);
     }
     //00S -> 00E
     @Test
-    void shouldTurnLeftFromS_whenExecuteCommand_givenStartFromS() {
+    void shouldTurnLeftFromS_whenexecuteSingleCommand_givenStartFromS() {
         //given
         int locationX = 0;
         int locationY = 0;
@@ -105,13 +109,13 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(locationX, locationY, direction);
 
         //when
-        String actual = marsRover.executeCommand(command);
+        String actual = marsRover.executeSingleCommand(command);
         //then
         assertEquals(expected,actual);
     }
     //00E -> 00N
     @Test
-    void shouldTurnLeftFromE_whenExecuteCommand_givenStartFromE() {
+    void shouldTurnLeftFromE_whenexecuteSingleCommand_givenStartFromE() {
         //given
         int locationX = 0;
         int locationY = 0;
@@ -122,13 +126,13 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(locationX, locationY, direction);
 
         //when
-        String actual = marsRover.executeCommand(command);
+        String actual = marsRover.executeSingleCommand(command);
         //then
         assertEquals(expected,actual);
     }
     //00W -> 00S
     @Test
-    void shouldTurnLeftFromW_whenExecuteCommand_givenStartFromW() {
+    void shouldTurnLeftFromW_whenexecuteSingleCommand_givenStartFromW() {
         //given
         int locationX = 0;
         int locationY = 0;
@@ -139,12 +143,12 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(locationX, locationY, direction);
 
         //when
-        String actual = marsRover.executeCommand(command);
+        String actual = marsRover.executeSingleCommand(command);
         //then
         assertEquals(expected,actual);
     }
     @Test
-    void shouldTurnRightFromN_whenExecuteCommand_givenStartFromN() {
+    void shouldTurnRightFromN_whenexecuteSingleCommand_givenStartFromN() {
         //given
         int locationX = 0;
         int locationY = 0;
@@ -155,12 +159,12 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(locationX, locationY, direction);
 
         //when
-        String actual = marsRover.executeCommand(command);
+        String actual = marsRover.executeSingleCommand(command);
         //then
         assertEquals(expected,actual);
     }
     @Test
-    void shouldTurnRightFromS_whenExecuteCommand_givenStartFromS() {
+    void shouldTurnRightFromS_whenexecuteSingleCommand_givenStartFromS() {
         //given
         int locationX = 0;
         int locationY = 0;
@@ -171,13 +175,13 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(locationX, locationY, direction);
 
         //when
-        String actual = marsRover.executeCommand(command);
+        String actual = marsRover.executeSingleCommand(command);
         //then
         assertEquals(expected,actual);
     }
 
     @Test
-    void shouldTurnRightFromE_whenExecuteCommand_givenStartFromE() {
+    void shouldTurnRightFromE_whenexecuteSingleCommand_givenStartFromE() {
         //given
         int locationX = 0;
         int locationY = 0;
@@ -188,12 +192,12 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(locationX, locationY, direction);
 
         //when
-        String actual = marsRover.executeCommand(command);
+        String actual = marsRover.executeSingleCommand(command);
         //then
         assertEquals(expected,actual);
     }
     @Test
-    void shouldTurnRightFromW_whenExecuteCommand_givenStartFromW() {
+    void shouldTurnRightFromW_whenexecuteSingleCommand_givenStartFromW() {
         //given
         int locationX = 0;
         int locationY = 0;
@@ -204,9 +208,26 @@ class MarsRoverTest {
         MarsRover marsRover = new MarsRover(locationX, locationY, direction);
 
         //when
-        String actual = marsRover.executeCommand(command);
+        String actual = marsRover.executeSingleCommand(command);
         //then
         assertEquals(expected,actual);
+    }
+    
+    //New Test
+    @Test
+    void shouldMoveThreeTimes_whenexecuteSingleCommands_givenStartFromN(){
+        int locationX = 0;
+        int locationY = 0;
+        String direction = "N";
+        String commands = "MMM";
+        String expected = "0 3 N";
+
+        MarsRover marsRover = new MarsRover(locationX, locationY, direction);
+
+        String actual = marsRover.executeBatchCommand(commands);
+
+        assertEquals(expected,actual);
+
     }
 
 }
